@@ -25,20 +25,20 @@ export const dict = {
       stat1Label: "durée maximale d'attention",
       stat2: "80 %",
       stat2Label: "d'oubli en quelques jours",
-      stat3: "3",
+      stat3: "6+",
       stat3Label: "solutions concrètes",
     },
     home: {
       whyTitle: "Pourquoi ce site ?",
       whyText:
         "L'ennui n'est pas une faute des élèves : c'est un signal. Quand le cerveau n'est pas sollicité activement, il décroche. Ce site rassemble les causes principales et les méthodes qui fonctionnent, pour les élèves comme pour les professeurs, partout dans le monde.",
-      previewProblems: "Les 3 problèmes",
-      previewSolutions: "Les 3 solutions",
+      previewProblems: "Les problèmes",
+      previewSolutions: "Les solutions",
       previewTeachers: "Méthodes pour capter l'attention",
       readMore: "Lire la suite",
     },
     problems: {
-      title: "3 Problèmes",
+      title: "Problèmes",
       subtitle: "Ce qui casse l'attention et la motivation en classe.",
       items: [
         {
@@ -53,10 +53,22 @@ export const dict = {
           t: "Désorganisation et procrastination",
           d: "Les élèves repoussent le travail face à une charge floue et se laissent facilement distraire par les écrans et réseaux sociaux.",
         },
+        {
+          t: "Manque de sens perçu",
+          d: "Quand les élèves ne comprennent pas à quoi sert une leçon dans la vraie vie, l'intérêt chute et la motivation s'évapore.",
+        },
+        {
+          t: "Peur de l'erreur",
+          d: "Un climat scolaire trop stressant ou compétitif pousse les élèves à se taire par peur du jugement, ce qui réduit l'engagement.",
+        },
+        {
+          t: "Fatigue et surcharge cognitive",
+          d: "Des journées trop longues, un sommeil insuffisant et une surcharge de devoirs épuisent le cerveau et rendent l'écoute difficile.",
+        },
       ],
     },
     solutions: {
-      title: "3 Solutions",
+      title: "Solutions",
       subtitle: "Des méthodes validées, simples à mettre en place dès demain.",
       items: [
         {
@@ -70,6 +82,18 @@ export const dict = {
         {
           t: "Cockpit anti-procrastination",
           d: "Intégration d'outils de gestion du temps (minuteur Pomodoro, matrice d'Eisenhower) pour structurer le travail et planifier des pauses stratégiques.",
+        },
+        {
+          t: "Donner du sens aux apprentissages",
+          d: "Relier chaque notion à des situations concrètes, des métiers, des actualités ou des passions des élèves pour raviver la curiosité naturelle.",
+        },
+        {
+          t: "Climat de classe bienveillant",
+          d: "Créer un espace où l'erreur est acceptée comme une étape d'apprentissage : les élèves osent poser des questions et s'investir sans peur du jugement.",
+        },
+        {
+          t: "Gestion de l'énergie et du sommeil",
+          d: "Apprendre à respecter son rythme biologique, dormir suffisamment, alterner concentration et repos, et éviter les écrans avant de dormir.",
         },
       ],
     },
