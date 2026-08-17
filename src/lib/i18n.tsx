@@ -1,0 +1,295 @@
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+
+export type Lang = "fr" | "en" | "ar";
+
+export const LANGS: { code: Lang; label: string }[] = [
+  { code: "fr", label: "FR" },
+  { code: "en", label: "EN" },
+  { code: "ar", label: "AR" },
+];
+
+type Dict = typeof dict.fr;
+
+export const dict = {
+  fr: {
+    brand: "Anti Ennui",
+    nav: { home: "Accueil", problems: "Problèmes", solutions: "Solutions", teachers: "Pour les profs" },
+    hero: {
+      badge: "Pour tous les élèves du monde",
+      title: "En finir avec l'ennui en cours",
+      subtitle:
+        "Anti Ennui explique pourquoi les élèves décrochent en classe et propose des solutions concrètes pour apprendre avec plaisir et retenir durablement.",
+      ctaProblems: "Voir les problèmes",
+      ctaSolutions: "Découvrir les solutions",
+      stat1: "20-30 min",
+      stat1Label: "durée maximale d'attention",
+      stat2: "80 %",
+      stat2Label: "d'oubli en quelques jours",
+      stat3: "3",
+      stat3Label: "solutions concrètes",
+    },
+    home: {
+      whyTitle: "Pourquoi ce site ?",
+      whyText:
+        "L'ennui n'est pas une faute des élèves : c'est un signal. Quand le cerveau n'est pas sollicité activement, il décroche. Ce site rassemble les causes principales et les méthodes qui fonctionnent, pour les élèves comme pour les professeurs, partout dans le monde.",
+      previewProblems: "Les 3 problèmes",
+      previewSolutions: "Les 3 solutions",
+      previewTeachers: "Méthodes pour capter l'attention",
+      readMore: "Lire la suite",
+    },
+    problems: {
+      title: "3 Problèmes",
+      subtitle: "Ce qui casse l'attention et la motivation en classe.",
+      items: [
+        {
+          t: "Décrochage en classe",
+          d: "Les cours magistraux passifs dépassent la capacité d'attention des élèves (limitée à 20-30 minutes), provoquant ennui et bavardages.",
+        },
+        {
+          t: "Réviser sans retenir",
+          d: "La simple relecture passive des cours avant un examen donne l'illusion de connaître le sujet, mais on oublie 80% de l'information en quelques jours.",
+        },
+        {
+          t: "Désorganisation et procrastination",
+          d: "Les élèves repoussent le travail face à une charge floue et se laissent facilement distraire par les écrans et réseaux sociaux.",
+        },
+      ],
+    },
+    solutions: {
+      title: "3 Solutions",
+      subtitle: "Des méthodes validées, simples à mettre en place dès demain.",
+      items: [
+        {
+          t: "Pédagogie active & séquençage",
+          d: "Découpage des cours en sessions courtes de 15 à 20 minutes dynamisées par des quiz en direct et des défis interactifs pour réengager immédiatement l'attention.",
+        },
+        {
+          t: "Mémorisation ancrée",
+          d: "Rappel actif et répétition espacée : génération de flashcards et révisions automatiques aux intervalles clés (J+1, J+3, J+7, J+30) pour ancrer les cours dans la mémoire à long terme.",
+        },
+        {
+          t: "Cockpit anti-procrastination",
+          d: "Intégration d'outils de gestion du temps (minuteur Pomodoro, matrice d'Eisenhower) pour structurer le travail et planifier des pauses stratégiques.",
+        },
+      ],
+    },
+    teachers: {
+      title: "Méthodes pour les professeurs",
+      subtitle: "Comment capter et garder l'attention d'une classe entière.",
+      items: [
+        { t: "Commencer par une accroche", d: "Une question surprenante, une image ou une histoire de 60 secondes pour créer la curiosité avant le contenu." },
+        { t: "Règle des 15 minutes", d: "Changer d'activité toutes les 15-20 minutes : explication, exercice, discussion, correction." },
+        { t: "Interroger tout le monde", d: "Ardoises, doigts levés, applications de quiz : chaque élève répond, pas seulement les volontaires." },
+        { t: "Travail en binômes", d: "Deux minutes pour comparer une réponse avec son voisin : tout le monde parle, personne ne dort." },
+        { t: "Rendre le cours concret", d: "Relier chaque notion à la vie réelle, à l'actualité ou aux passions des élèves." },
+        { t: "Donner du mouvement", d: "Déplacements, écriture au tableau, coins d'opinion dans la salle : le corps réveille le cerveau." },
+        { t: "Valoriser l'erreur", d: "Créer un climat où se tromper sert à apprendre : les élèves osent participer." },
+        { t: "Terminer par un rappel", d: "Trois minutes de fin : chaque élève écrit ce qu'il a retenu, sans notes." },
+      ],
+    },
+    footer: {
+      world: "Ce site s'adresse à tous les élèves du monde.",
+      credit: "Designed by Benmessaoud abdellah rabah and lebane manile",
+    },
+  },
+  en: {
+    brand: "Anti Ennui",
+    nav: { home: "Home", problems: "Problems", solutions: "Solutions", teachers: "For teachers" },
+    hero: {
+      badge: "For every student in the world",
+      title: "Putting an end to boredom in class",
+      subtitle:
+        "Anti Ennui explains why students disengage in class and offers concrete solutions to learn with pleasure and remember for the long term.",
+      ctaProblems: "See the problems",
+      ctaSolutions: "Discover the solutions",
+      stat1: "20-30 min",
+      stat1Label: "maximum attention span",
+      stat2: "80%",
+      stat2Label: "forgotten within days",
+      stat3: "3",
+      stat3Label: "concrete solutions",
+    },
+    home: {
+      whyTitle: "Why this website?",
+      whyText:
+        "Boredom is not the student's fault: it is a signal. When the brain is not actively engaged, it switches off. This site gathers the main causes and the methods that actually work, for students and teachers everywhere.",
+      previewProblems: "The 3 problems",
+      previewSolutions: "The 3 solutions",
+      previewTeachers: "Methods to capture attention",
+      readMore: "Read more",
+    },
+    problems: {
+      title: "3 Problems",
+      subtitle: "What breaks attention and motivation in the classroom.",
+      items: [
+        {
+          t: "Disengagement in class",
+          d: "Passive lectures exceed students' attention span (limited to 20-30 minutes), causing boredom and chatter.",
+        },
+        {
+          t: "Revising without remembering",
+          d: "Passively rereading notes before an exam creates the illusion of knowing the subject, yet 80% of the information is forgotten within days.",
+        },
+        {
+          t: "Disorganisation and procrastination",
+          d: "Students postpone work when the workload feels vague, and are easily distracted by screens and social media.",
+        },
+      ],
+    },
+    solutions: {
+      title: "3 Solutions",
+      subtitle: "Proven methods, easy to start using tomorrow.",
+      items: [
+        {
+          t: "Active teaching & sequencing",
+          d: "Splitting lessons into short 15-20 minute sessions energised by live quizzes and interactive challenges to instantly re-engage attention.",
+        },
+        {
+          t: "Anchored memorisation",
+          d: "Active recall and spaced repetition: generating flashcards and scheduling automatic reviews at key intervals (D+1, D+3, D+7, D+30) to anchor lessons in long-term memory.",
+        },
+        {
+          t: "Anti-procrastination cockpit",
+          d: "Built-in time management tools (Pomodoro timer, Eisenhower matrix) to structure work and plan strategic breaks.",
+        },
+      ],
+    },
+    teachers: {
+      title: "Methods for teachers",
+      subtitle: "How to capture and keep a whole classroom's attention.",
+      items: [
+        { t: "Start with a hook", d: "A surprising question, an image or a 60-second story to spark curiosity before the content." },
+        { t: "The 15-minute rule", d: "Change activity every 15-20 minutes: explanation, exercise, discussion, correction." },
+        { t: "Ask everyone", d: "Mini whiteboards, hand signals, quiz apps: every student answers, not just volunteers." },
+        { t: "Work in pairs", d: "Two minutes to compare an answer with a neighbour: everyone talks, nobody sleeps." },
+        { t: "Make it concrete", d: "Link every concept to real life, current events or students' passions." },
+        { t: "Add movement", d: "Moving around, writing on the board, opinion corners: the body wakes up the brain." },
+        { t: "Value mistakes", d: "Build a climate where being wrong helps learning: students dare to participate." },
+        { t: "End with recall", d: "Final three minutes: each student writes what they remember, without notes." },
+      ],
+    },
+    footer: {
+      world: "This website is for every student in the world.",
+      credit: "Designed by Benmessaoud abdellah rabah and lebane manile",
+    },
+  },
+  ar: {
+    brand: "ضد الملل",
+    nav: { home: "الرئيسية", problems: "المشاكل", solutions: "الحلول", teachers: "للأساتذة" },
+    hero: {
+      badge: "لكل التلاميذ في العالم",
+      title: "لننهِ الملل داخل القسم",
+      subtitle:
+        "موقع «ضد الملل» يشرح لماذا يفقد التلاميذ تركيزهم في القسم، ويقدّم حلولاً عملية للتعلّم بمتعة والحفظ لمدة طويلة.",
+      ctaProblems: "اطّلع على المشاكل",
+      ctaSolutions: "اكتشف الحلول",
+      stat1: "20-30 دقيقة",
+      stat1Label: "أقصى مدة للتركيز",
+      stat2: "80٪",
+      stat2Label: "تُنسى خلال أيام",
+      stat3: "3",
+      stat3Label: "حلول عملية",
+    },
+    home: {
+      whyTitle: "لماذا هذا الموقع؟",
+      whyText:
+        "الملل ليس خطأ التلميذ، بل هو إشارة. عندما لا يُشغَّل الدماغ بنشاط فإنه ينقطع. يجمع هذا الموقع الأسباب الرئيسية والطرق التي تنجح فعلاً، للتلاميذ والأساتذة في كل مكان.",
+      previewProblems: "المشاكل الثلاث",
+      previewSolutions: "الحلول الثلاثة",
+      previewTeachers: "طرق جذب الانتباه",
+      readMore: "اقرأ المزيد",
+    },
+    problems: {
+      title: "٣ مشاكل",
+      subtitle: "ما الذي يكسر الانتباه والدافعية داخل القسم.",
+      items: [
+        {
+          t: "الانقطاع داخل القسم",
+          d: "الدروس الإلقائية السلبية تتجاوز قدرة التلميذ على التركيز (المحدودة بـ 20-30 دقيقة)، فتسبب الملل والثرثرة.",
+        },
+        {
+          t: "المراجعة دون حفظ",
+          d: "إعادة قراءة الدروس بشكل سلبي قبل الامتحان تعطي وهم المعرفة، لكن يُنسى 80٪ من المعلومات خلال أيام قليلة.",
+        },
+        {
+          t: "الفوضى والتسويف",
+          d: "يؤجّل التلاميذ العمل أمام حجم مهام غير واضح، وينشغلون بسهولة بالشاشات ومواقع التواصل.",
+        },
+      ],
+    },
+    solutions: {
+      title: "٣ حلول",
+      subtitle: "طرق مثبتة وسهلة التطبيق ابتداءً من الغد.",
+      items: [
+        {
+          t: "بيداغوجيا نشطة وتقسيم الحصص",
+          d: "تقسيم الدروس إلى حصص قصيرة من 15 إلى 20 دقيقة مع اختبارات مباشرة وتحديات تفاعلية لاستعادة الانتباه فوراً.",
+        },
+        {
+          t: "حفظ راسخ",
+          d: "الاسترجاع النشط والتكرار المتباعد: إنشاء بطاقات مراجعة وبرمجة مراجعات تلقائية في فترات مفتاحية (يوم+1، يوم+3، يوم+7، يوم+30) لترسيخ الدروس في الذاكرة بعيدة المدى.",
+        },
+        {
+          t: "قمرة عمل ضد التسويف",
+          d: "دمج أدوات تسيير الوقت (مؤقّت بومودورو، مصفوفة أيزنهاور) لتنظيم العمل وبرمجة استراحات ذكية.",
+        },
+      ],
+    },
+    teachers: {
+      title: "طرق للأساتذة",
+      subtitle: "كيف تجذب انتباه القسم كله وتحافظ عليه.",
+      items: [
+        { t: "ابدأ بمُشوّق", d: "سؤال مفاجئ أو صورة أو قصة في 60 ثانية لخلق الفضول قبل المحتوى." },
+        { t: "قاعدة الـ15 دقيقة", d: "غيّر النشاط كل 15-20 دقيقة: شرح، تمرين، نقاش، تصحيح." },
+        { t: "أشرك الجميع", d: "ألواح صغيرة، إشارات اليد، تطبيقات الاختبارات: كل تلميذ يجيب لا المتطوعون فقط." },
+        { t: "العمل في ثنائيات", d: "دقيقتان لمقارنة الإجابة مع الزميل: الجميع يتكلم ولا أحد ينام." },
+        { t: "اجعل الدرس ملموساً", d: "اربط كل مفهوم بالحياة الواقعية أو الأحداث أو اهتمامات التلاميذ." },
+        { t: "أضف الحركة", d: "التنقل، الكتابة على السبورة، زوايا الرأي في القسم: الجسد يوقظ الدماغ." },
+        { t: "ثمّن الخطأ", d: "اخلق جواً يكون فيه الخطأ وسيلة للتعلّم فيجرؤ التلاميذ على المشاركة." },
+        { t: "اختم بالاسترجاع", d: "ثلاث دقائق أخيرة: كل تلميذ يكتب ما حفظه دون النظر إلى الكراس." },
+      ],
+    },
+    footer: {
+      world: "هذا الموقع موجَّه لكل التلاميذ في العالم.",
+      credit: "Designed by Benmessaoud abdellah rabah and lebane manile",
+    },
+  },
+} satisfies Record<Lang, unknown> as Record<Lang, any>;
+
+type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: Dict; dir: "ltr" | "rtl" };
+
+const LangContext = createContext<Ctx>({
+  lang: "fr",
+  setLang: () => {},
+  t: dict.fr as Dict,
+  dir: "ltr",
+});
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [lang, setLangState] = useState<Lang>("fr");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("ae-lang") as Lang | null;
+    if (saved && ["fr", "en", "ar"].includes(saved)) setLangState(saved);
+  }, []);
+
+  const dir = lang === "ar" ? "rtl" : "ltr";
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+  }, [lang, dir]);
+
+  const setLang = (l: Lang) => {
+    setLangState(l);
+    window.localStorage.setItem("ae-lang", l);
+  };
+
+  return (
+    <LangContext.Provider value={{ lang, setLang, t: dict[lang] as Dict, dir }}>
+      {children}
+    </LangContext.Provider>
+  );
+}
+
+export const useLang = () => useContext(LangContext);
