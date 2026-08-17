@@ -25,20 +25,20 @@ export const dict = {
       stat1Label: "durée maximale d'attention",
       stat2: "80 %",
       stat2Label: "d'oubli en quelques jours",
-      stat3: "3",
+      stat3: "6+",
       stat3Label: "solutions concrètes",
     },
     home: {
       whyTitle: "Pourquoi ce site ?",
       whyText:
         "L'ennui n'est pas une faute des élèves : c'est un signal. Quand le cerveau n'est pas sollicité activement, il décroche. Ce site rassemble les causes principales et les méthodes qui fonctionnent, pour les élèves comme pour les professeurs, partout dans le monde.",
-      previewProblems: "Les 3 problèmes",
-      previewSolutions: "Les 3 solutions",
+      previewProblems: "Les problèmes",
+      previewSolutions: "Les solutions",
       previewTeachers: "Méthodes pour capter l'attention",
       readMore: "Lire la suite",
     },
     problems: {
-      title: "3 Problèmes",
+      title: "Problèmes",
       subtitle: "Ce qui casse l'attention et la motivation en classe.",
       items: [
         {
@@ -53,10 +53,22 @@ export const dict = {
           t: "Désorganisation et procrastination",
           d: "Les élèves repoussent le travail face à une charge floue et se laissent facilement distraire par les écrans et réseaux sociaux.",
         },
+        {
+          t: "Manque de sens perçu",
+          d: "Quand les élèves ne comprennent pas à quoi sert une leçon dans la vraie vie, l'intérêt chute et la motivation s'évapore.",
+        },
+        {
+          t: "Peur de l'erreur",
+          d: "Un climat scolaire trop stressant ou compétitif pousse les élèves à se taire par peur du jugement, ce qui réduit l'engagement.",
+        },
+        {
+          t: "Fatigue et surcharge cognitive",
+          d: "Des journées trop longues, un sommeil insuffisant et une surcharge de devoirs épuisent le cerveau et rendent l'écoute difficile.",
+        },
       ],
     },
     solutions: {
-      title: "3 Solutions",
+      title: "Solutions",
       subtitle: "Des méthodes validées, simples à mettre en place dès demain.",
       items: [
         {
@@ -70,6 +82,18 @@ export const dict = {
         {
           t: "Cockpit anti-procrastination",
           d: "Intégration d'outils de gestion du temps (minuteur Pomodoro, matrice d'Eisenhower) pour structurer le travail et planifier des pauses stratégiques.",
+        },
+        {
+          t: "Donner du sens aux apprentissages",
+          d: "Relier chaque notion à des situations concrètes, des métiers, des actualités ou des passions des élèves pour raviver la curiosité naturelle.",
+        },
+        {
+          t: "Climat de classe bienveillant",
+          d: "Créer un espace où l'erreur est acceptée comme une étape d'apprentissage : les élèves osent poser des questions et s'investir sans peur du jugement.",
+        },
+        {
+          t: "Gestion de l'énergie et du sommeil",
+          d: "Apprendre à respecter son rythme biologique, dormir suffisamment, alterner concentration et repos, et éviter les écrans avant de dormir.",
         },
       ],
     },
@@ -106,20 +130,20 @@ export const dict = {
       stat1Label: "maximum attention span",
       stat2: "80%",
       stat2Label: "forgotten within days",
-      stat3: "3",
+      stat3: "6+",
       stat3Label: "concrete solutions",
     },
     home: {
       whyTitle: "Why this website?",
       whyText:
         "Boredom is not the student's fault: it is a signal. When the brain is not actively engaged, it switches off. This site gathers the main causes and the methods that actually work, for students and teachers everywhere.",
-      previewProblems: "The 3 problems",
-      previewSolutions: "The 3 solutions",
+      previewProblems: "The problems",
+      previewSolutions: "The solutions",
       previewTeachers: "Methods to capture attention",
       readMore: "Read more",
     },
     problems: {
-      title: "3 Problems",
+      title: "Problems",
       subtitle: "What breaks attention and motivation in the classroom.",
       items: [
         {
@@ -134,10 +158,22 @@ export const dict = {
           t: "Disorganisation and procrastination",
           d: "Students postpone work when the workload feels vague, and are easily distracted by screens and social media.",
         },
+        {
+          t: "Lack of perceived meaning",
+          d: "When students do not see how a lesson applies to real life, interest drops and motivation evaporates.",
+        },
+        {
+          t: "Fear of mistakes",
+          d: "A stressful or competitive school climate makes students stay silent for fear of judgement, reducing participation.",
+        },
+        {
+          t: "Fatigue and cognitive overload",
+          d: "Overlong days, insufficient sleep and too much homework exhaust the brain and make listening difficult.",
+        },
       ],
     },
     solutions: {
-      title: "3 Solutions",
+      title: "Solutions",
       subtitle: "Proven methods, easy to start using tomorrow.",
       items: [
         {
@@ -151,6 +187,18 @@ export const dict = {
         {
           t: "Anti-procrastination cockpit",
           d: "Built-in time management tools (Pomodoro timer, Eisenhower matrix) to structure work and plan strategic breaks.",
+        },
+        {
+          t: "Make learning meaningful",
+          d: "Link every concept to concrete situations, careers, current events or students' passions to reignite natural curiosity.",
+        },
+        {
+          t: "Supportive classroom climate",
+          d: "Create a space where mistakes are accepted as part of learning: students dare to ask questions and engage without fear of judgement.",
+        },
+        {
+          t: "Energy and sleep management",
+          d: "Learn to respect your biological rhythm, sleep enough, alternate focus and rest, and avoid screens before bedtime.",
         },
       ],
     },
@@ -187,20 +235,20 @@ export const dict = {
       stat1Label: "أقصى مدة للتركيز",
       stat2: "80٪",
       stat2Label: "تُنسى خلال أيام",
-      stat3: "3",
+      stat3: "6+",
       stat3Label: "حلول عملية",
     },
     home: {
       whyTitle: "لماذا هذا الموقع؟",
       whyText:
         "الملل ليس خطأ التلميذ، بل هو إشارة. عندما لا يُشغَّل الدماغ بنشاط فإنه ينقطع. يجمع هذا الموقع الأسباب الرئيسية والطرق التي تنجح فعلاً، للتلاميذ والأساتذة في كل مكان.",
-      previewProblems: "المشاكل الثلاث",
-      previewSolutions: "الحلول الثلاثة",
+      previewProblems: "المشاكل",
+      previewSolutions: "الحلول",
       previewTeachers: "طرق جذب الانتباه",
       readMore: "اقرأ المزيد",
     },
     problems: {
-      title: "٣ مشاكل",
+      title: "المشاكل",
       subtitle: "ما الذي يكسر الانتباه والدافعية داخل القسم.",
       items: [
         {
@@ -215,10 +263,22 @@ export const dict = {
           t: "الفوضى والتسويف",
           d: "يؤجّل التلاميذ العمل أمام حجم مهام غير واضح، وينشغلون بسهولة بالشاشات ومواقع التواصل.",
         },
+        {
+          t: "غياب المعنى الملموس",
+          d: "عندما لا يرى التلميذ فائدة الدرس في الحياة الواقعية، يتراجع الاهتمام وتتلاشى الدافعية.",
+        },
+        {
+          t: "الخوف من الخطأ",
+          d: "الجو المدرسي المجهد أو التنافسي يجعل التلاميذ يصمتون خوفاً من الحكم عليهم، مما يقلل المشاركة.",
+        },
+        {
+          t: "التعب والإرهاق الذهني",
+          d: "الأيام الطويلة، قلة النوم وكثرة الواجبات تُرهق الدماغ وتجعل الاستماع إلى الدرس صعباً.",
+        },
       ],
     },
     solutions: {
-      title: "٣ حلول",
+      title: "الحلول",
       subtitle: "طرق مثبتة وسهلة التطبيق ابتداءً من الغد.",
       items: [
         {
@@ -232,6 +292,18 @@ export const dict = {
         {
           t: "قمرة عمل ضد التسويف",
           d: "دمج أدوات تسيير الوقت (مؤقّت بومودورو، مصفوفة أيزنهاور) لتنظيم العمل وبرمجة استراحات ذكية.",
+        },
+        {
+          t: "إعطاء معنى للتعلم",
+          d: "ربط كل مفهوم بواقع ملموس، بمهن، بأحداث أو باهتمامات التلاميذ لإعادة إشعال الفضول الطبيعي.",
+        },
+        {
+          t: "جو قسم داعم",
+          d: "خلق فضاء يُقبل فيه الخطأ كخطوة للتعلّم: يجرؤ التلاميذ على طرح الأسئلة والمشاركة دون خوف من الحكم.",
+        },
+        {
+          t: "تدبير الطاقة والنوم",
+          d: "تعلّم احترام الإيقاع البيولوجي، النوم بما يكفي، التناوب بين التركيز والراحة، وتجنب الشاشات قبل النوم.",
         },
       ],
     },
