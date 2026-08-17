@@ -130,20 +130,20 @@ export const dict = {
       stat1Label: "maximum attention span",
       stat2: "80%",
       stat2Label: "forgotten within days",
-      stat3: "3",
+      stat3: "6+",
       stat3Label: "concrete solutions",
     },
     home: {
       whyTitle: "Why this website?",
       whyText:
         "Boredom is not the student's fault: it is a signal. When the brain is not actively engaged, it switches off. This site gathers the main causes and the methods that actually work, for students and teachers everywhere.",
-      previewProblems: "The 3 problems",
-      previewSolutions: "The 3 solutions",
+      previewProblems: "The problems",
+      previewSolutions: "The solutions",
       previewTeachers: "Methods to capture attention",
       readMore: "Read more",
     },
     problems: {
-      title: "3 Problems",
+      title: "Problems",
       subtitle: "What breaks attention and motivation in the classroom.",
       items: [
         {
@@ -158,10 +158,22 @@ export const dict = {
           t: "Disorganisation and procrastination",
           d: "Students postpone work when the workload feels vague, and are easily distracted by screens and social media.",
         },
+        {
+          t: "Lack of perceived meaning",
+          d: "When students do not see how a lesson applies to real life, interest drops and motivation evaporates.",
+        },
+        {
+          t: "Fear of mistakes",
+          d: "A stressful or competitive school climate makes students stay silent for fear of judgement, reducing participation.",
+        },
+        {
+          t: "Fatigue and cognitive overload",
+          d: "Overlong days, insufficient sleep and too much homework exhaust the brain and make listening difficult.",
+        },
       ],
     },
     solutions: {
-      title: "3 Solutions",
+      title: "Solutions",
       subtitle: "Proven methods, easy to start using tomorrow.",
       items: [
         {
@@ -175,6 +187,18 @@ export const dict = {
         {
           t: "Anti-procrastination cockpit",
           d: "Built-in time management tools (Pomodoro timer, Eisenhower matrix) to structure work and plan strategic breaks.",
+        },
+        {
+          t: "Make learning meaningful",
+          d: "Link every concept to concrete situations, careers, current events or students' passions to reignite natural curiosity.",
+        },
+        {
+          t: "Supportive classroom climate",
+          d: "Create a space where mistakes are accepted as part of learning: students dare to ask questions and engage without fear of judgement.",
+        },
+        {
+          t: "Energy and sleep management",
+          d: "Learn to respect your biological rhythm, sleep enough, alternate focus and rest, and avoid screens before bedtime.",
         },
       ],
     },
