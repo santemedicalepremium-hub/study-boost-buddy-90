@@ -32,7 +32,7 @@ function SolutionsPage() {
       <section className="mx-auto max-w-4xl px-5 py-14">
         <div className="flex flex-col gap-6">
           {t.solutions.items.map((item: { t: string; d: string }, i: number) => {
-            const Icon = icons[i];
+            const Icon = icons[i]!;
             return (
               <article
                 key={item.t}

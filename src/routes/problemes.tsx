@@ -32,7 +32,7 @@ function ProblemsPage() {
       <section className="mx-auto max-w-6xl px-5 py-14">
         <div className="grid gap-6 md:grid-cols-3">
           {t.problems.items.map((item: { t: string; d: string }, i: number) => {
-            const Icon = icons[i];
+            const Icon = icons[i]!;
             return (
               <article key={item.t} className="card-surface flex flex-col gap-4 p-7 hover:shadow-card">
                 <div className="flex items-center justify-between">
