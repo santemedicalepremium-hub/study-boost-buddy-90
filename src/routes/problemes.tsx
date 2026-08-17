@@ -1,28 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AlarmClock, BrainCircuit, Smartphone } from "lucide-react";
+import { AlarmClock, BrainCircuit, Smartphone, HelpCircle, Frown, BatteryWarning } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/problemes")({
   head: () => ({
     meta: [
-      { title: "Les 3 problèmes de l'ennui en cours | Anti Ennui" },
+      { title: "Les problèmes de l'ennui en cours | Anti Ennui" },
       {
         name: "description",
         content:
-          "Décrochage en classe, révisions inefficaces, procrastination : les trois causes principales de l'ennui scolaire expliquées simplement.",
+          "Décrochage, révisions inefficaces, procrastination, manque de sens, peur de l'erreur et fatigue : les causes principales de l'ennui scolaire expliquées simplement.",
       },
-      { property: "og:title", content: "Les 3 problèmes de l'ennui en cours | Anti Ennui" },
+      { property: "og:title", content: "Les problèmes de l'ennui en cours | Anti Ennui" },
       {
         property: "og:description",
-        content: "Décrochage, oubli rapide et procrastination : pourquoi les élèves s'ennuient en cours.",
+        content: "Six causes principales de l'ennui scolaire et comment les comprendre pour mieux les résoudre.",
       },
     ],
   }),
   component: ProblemsPage,
 });
 
-const icons = [AlarmClock, BrainCircuit, Smartphone];
+const icons = [AlarmClock, BrainCircuit, Smartphone, HelpCircle, Frown, BatteryWarning];
 
 function ProblemsPage() {
   const { t } = useLang();
@@ -30,7 +30,7 @@ function ProblemsPage() {
     <SiteLayout>
       <PageHeader title={t.problems.title} subtitle={t.problems.subtitle} />
       <section className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {t.problems.items.map((item: { t: string; d: string }, i: number) => {
             const Icon = icons[i]!;
             return (

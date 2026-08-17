@@ -1,28 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Zap, Repeat, Timer } from "lucide-react";
+import { Zap, Repeat, Timer, Lightbulb, Heart, Moon } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "3 solutions contre l'ennui scolaire | Anti Ennui" },
+      { title: "Solutions contre l'ennui scolaire | Anti Ennui" },
       {
         name: "description",
         content:
-          "Pédagogie active, rappel actif et répétition espacée, cockpit anti-procrastination : trois solutions concrètes pour apprendre mieux.",
+          "Pédagogie active, rappel actif, gestion du temps, sens des apprentissages, climat bienveillant et gestion de l'énergie : six solutions concrètes pour apprendre mieux.",
       },
-      { property: "og:title", content: "3 solutions contre l'ennui scolaire | Anti Ennui" },
+      { property: "og:title", content: "Solutions contre l'ennui scolaire | Anti Ennui" },
       {
         property: "og:description",
-        content: "Séquençage des cours, flashcards espacées et outils Pomodoro pour retenir durablement.",
+        content: "Six méthodes validées pour apprendre avec plaisir et retenir durablement.",
       },
     ],
   }),
   component: SolutionsPage,
 });
 
-const icons = [Zap, Repeat, Timer];
+const icons = [Zap, Repeat, Timer, Lightbulb, Heart, Moon];
 
 function SolutionsPage() {
   const { t } = useLang();
