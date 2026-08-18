@@ -13,7 +13,7 @@ type Dict = typeof dict.fr;
 export const dict = {
   fr: {
     brand: "Anti Ennui",
-    nav: { home: "Accueil", problems: "Problèmes", solutions: "Solutions", teachers: "Pour les profs" },
+    nav: { home: "Accueil", problems: "Problèmes", solutions: "Solutions", teachers: "Pour les profs", courses: "Cours" },
     hero: {
       badge: "Pour tous les élèves du monde",
       title: "En finir avec l'ennui en cours",
@@ -95,7 +95,12 @@ export const dict = {
           t: "Gestion de l'énergie et du sommeil",
           d: "Apprendre à respecter son rythme biologique, dormir suffisamment, alterner concentration et repos, et éviter les écrans avant de dormir.",
         },
+        {
+          t: "Vaincre la peur du jugement",
+          d: "Instaurer des règles claires (« ici on a le droit de se tromper »), utiliser des réponses anonymes (ardoises, quiz, boîte à questions), travailler d'abord en binôme avant de parler devant la classe, valoriser l'effort plutôt que la bonne réponse, et interdire toute moquerie. L'élève ose participer quand l'erreur devient une information utile, pas une humiliation.",
+        },
       ],
+
     },
     teachers: {
       title: "Méthodes pour les professeurs",
@@ -118,7 +123,7 @@ export const dict = {
   },
   en: {
     brand: "Anti Ennui",
-    nav: { home: "Home", problems: "Problems", solutions: "Solutions", teachers: "For teachers" },
+    nav: { home: "Home", problems: "Problems", solutions: "Solutions", teachers: "For teachers", courses: "Courses" },
     hero: {
       badge: "For every student in the world",
       title: "Putting an end to boredom in class",
@@ -200,7 +205,12 @@ export const dict = {
           t: "Energy and sleep management",
           d: "Learn to respect your biological rhythm, sleep enough, alternate focus and rest, and avoid screens before bedtime.",
         },
+        {
+          t: "Overcoming the fear of judgement",
+          d: "Set clear rules (\"here you are allowed to be wrong\"), use anonymous answers (mini whiteboards, quizzes, question box), let students rehearse in pairs before speaking to the class, reward effort over the right answer, and ban mockery. Students dare to participate when a mistake becomes useful information, not humiliation.",
+        },
       ],
+
     },
     teachers: {
       title: "Methods for teachers",
@@ -223,7 +233,7 @@ export const dict = {
   },
   ar: {
     brand: "ضد الملل",
-    nav: { home: "الرئيسية", problems: "المشاكل", solutions: "الحلول", teachers: "للأساتذة" },
+    nav: { home: "الرئيسية", problems: "المشاكل", solutions: "الحلول", teachers: "للأساتذة", courses: "الدروس" },
     hero: {
       badge: "لكل التلاميذ في العالم",
       title: "لننهِ الملل داخل القسم",
@@ -305,7 +315,12 @@ export const dict = {
           t: "تدبير الطاقة والنوم",
           d: "تعلّم احترام الإيقاع البيولوجي، النوم بما يكفي، التناوب بين التركيز والراحة، وتجنب الشاشات قبل النوم.",
         },
+        {
+          t: "التغلب على الخوف من الحكم",
+          d: "وضع قواعد واضحة («هنا من حقك أن تخطئ»)، استعمال إجابات مجهولة (ألواح صغيرة، اختبارات، صندوق الأسئلة)، التمرّن في ثنائيات قبل الكلام أمام القسم، تثمين الجهد قبل الإجابة الصحيحة، ومنع أي سخرية. يجرؤ التلميذ على المشاركة عندما يصبح الخطأ معلومة مفيدة لا إهانة.",
+        },
       ],
+
     },
     teachers: {
       title: "طرق للأساتذة",

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Zap, Repeat, Timer, Lightbulb, Heart, Moon } from "lucide-react";
+import { Zap, Repeat, Timer, Lightbulb, Heart, Moon, ShieldCheck } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { useLang } from "@/lib/i18n";
 
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/solutions")({
   component: SolutionsPage,
 });
 
-const icons = [Zap, Repeat, Timer, Lightbulb, Heart, Moon];
+const icons = [Zap, Repeat, Timer, Lightbulb, Heart, Moon, ShieldCheck];
 
 function SolutionsPage() {
   const { t } = useLang();

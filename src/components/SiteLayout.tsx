@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { LANGS, useLang } from "@/lib/i18n";
+import { ChatBot } from "@/components/ChatBot";
 
 function LangSwitcher() {
   const { lang, setLang } = useLang();
@@ -34,6 +35,7 @@ function Header() {
     { to: "/", label: t.nav.home },
     { to: "/problemes", label: t.nav.problems },
     { to: "/solutions", label: t.nav.solutions },
+    { to: "/cours", label: t.nav.courses },
     { to: "/professeurs", label: t.nav.teachers },
   ] as const;
 
@@ -113,6 +115,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ChatBot />
     </div>
   );
 }
